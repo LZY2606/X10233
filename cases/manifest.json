@@ -1,0 +1,38 @@
+{
+  "case_id": "cabs-2026",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "station": "CABS",
+  "narrative": "测量团队导入 RINEX 观测历元与卫星状态(频率目录), 审阅每个站-星-频率弧段的周跳候选与修复假设。先核对伪距/载波/Doppler/LLI/信噪比/钟跳事件/频率编号/观测码均按历元原样保存; 随后触发边界组合; 第二分支检验检测器分歧; 最终经页面完成裁定、分叉与重算。",
+  "files": {
+    "cabs_v1.obs": "基线导入(含一处源数据笔误: G01 第2历元 L1C 多 1 周)",
+    "cabs_v2.obs": "局部源数据修订: 仅改正 G01 第2历元 L1C, 其余字节不变",
+    "cabs_branch2.obs": "第二分支: G03 码跳变 3.0m, 载波不变, 检验检测器分歧",
+    "bad_values.obs": "值级错误样例: 单字段不可解析, 保留原值并附诊断",
+    "malformed.obs": "结构错误样例: 历元行非法, 整批拒绝并附诊断"
+  },
+  "scenarios": [
+    {"id": "uneven-epochs", "kind": "不等间隔历元", "detail": "历元间隔 1s 后接 15s 跳变, 随后 1s 等间隔", "expect": "所有边按实际 dt 建模, Doppler 归一化后残差近零"},
+    {"id": "freq-missing", "kind": "频率缺失", "sat": "G03", "code": "L2W", "epochs": [4, 6], "expect": "TD(L2)/GF/MW 置 unavailable, 原因 frequency_unavailable, 原始位置留空不丢值"},
+    {"id": "receiver-clock-jump", "kind": "整机钟跳", "epoch": 3, "offset_m": 29.971253465742468, "expect": "产生 receiver 级 clock_event; TD 候选被拒绝, 原因 explained_by_receiver_clock; 不计为单星周跳"},
+    {"id": "single-sat-slip", "kind": "单星周跳", "sat": "G01", "edge": "e3->e4", "expect": "融合唯一候选 {L1C:+2, L2W:+2}"},
+    {"id": "lli-false-positive", "kind": "LLI 误报", "sat": "G02", "epoch": 2, "expect": "弧段在 e2 断开(原因 lli_flag), 无边候选; 人工标记误报后弧段重接"},
+    {"id": "tie-offsets", "kind": "多个等分整周偏移", "sat": "G03", "edge": "e3->e4", "expect": "TD(L1) 候选 {0,+1} 等分并列, 融合状态 ambiguous, 不自动采纳"},
+    {"id": "arc-local-staleness", "kind": "弧段局部过期", "expect": "v2 提交仅使 G01 e0->e1 的结果过期, 其余弧段结果保持当前"},
+    {"id": "detector-disagreement", "kind": "检测器分歧", "project": "branch2", "sat": "G03", "edge": "e4->e5", "expect": "MW 给出宽巷 -3 族候选, GF/TD 给出 0, 融合状态 disputed, 全部合法候选保留"}
+  ],
+  "rules": [
+    "电离层组合(GF)、Melbourne-Wubbena 与时间差分(TD)可给出不同候选, 不以任一检测器当真值",
+    "钟跳与单星周跳分开: 整机钟跳记为 clock_event, 修复只存偏移层(offset_entries), 不改原始载波",
+    "候选、拒绝原因、误差与未知状态均为一等数据; 局部输入变化只使依赖它的结果过期",
+    "过期结果仍可查看但不能冒充当前结果"
+  ],
+  "steps": [
+    {"id": "import_v1", "label": "导入基线 v1", "action": "commit_batch", "file": "cabs_v1.obs"},
+    {"id": "revise_params", "label": "参数修订(td_tol 0.25->0.30)", "action": "commit_params"},
+    {"id": "commit_v2", "label": "局部源数据修订 v2", "action": "commit_batch", "file": "cabs_v2.obs"},
+    {"id": "accept_g01_slip", "label": "接受 G01 e3->e4 周跳候选", "action": "accept", "sat": "G01", "edge": "e3->e4"},
+    {"id": "fork_alt", "label": "从接受前分叉 review-alt", "action": "fork"},
+    {"id": "reject_g01_on_alt", "label": "在 review-alt 上否定同一候选(冲突决定)", "action": "reject", "sat": "G01", "edge": "e3->e4"},
+    {"id": "mark_lli_false", "label": "标记 G02 e2 LLI 为误报并重接弧段", "action": "mark_lli_false", "sat": "G02", "epoch": 2}
+  ]
+}
