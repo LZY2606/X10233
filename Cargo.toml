@@ -1,0 +1,24 @@
+[package]
+name = "carrier-bench"
+version = "0.1.0"
+edition = "2021"
+description = "载波断点台 — 本地优先的 GNSS 载波相位周跳候选、多频组合与弧段修订史"
+
+[lib]
+name = "carrier_bench"
+path = "src/lib.rs"
+
+[[bin]]
+name = "carrier-bench"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "0.8", features = ["form"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { value = "1" }
+sha2 = "0.10"
+
+[profile.dev]
+opt-level = 0
