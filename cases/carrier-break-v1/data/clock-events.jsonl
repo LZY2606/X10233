@@ -1,0 +1,1 @@
+{"clock_offset_s_at_epoch": 1e-07, "kind": "receiver_clock_jump", "note": "Receiver clock jump shared by every satellite; not a single-satellite cycle slip.", "scope": "ALL_SATELLITES", "source": "rinex_epoch_header", "t_epoch_s": 180, "unit": "second"}

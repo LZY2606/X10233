@@ -1,0 +1,77 @@
+{
+  "case_id": "carrier-break-v1",
+  "detector_versions": {
+    "GF": "gf@1",
+    "MW": "mw@1",
+    "TD": "td@1"
+  },
+  "engineered_conditions": {
+    "equipartition_half_cycle": {
+      "band": "L1C",
+      "epoch_s": 120,
+      "fraction": 0.5,
+      "sat": "G03"
+    },
+    "irregular_epoch_gaps_s": [
+      30,
+      45,
+      45,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60
+    ],
+    "lli_false_positive": {
+      "band": "L1C",
+      "epoch_s": 300,
+      "sat": "G02"
+    },
+    "missing_frequency": {
+      "epoch_s": 75,
+      "missing": [
+        "C2W",
+        "L2W",
+        "D2W"
+      ],
+      "sat": "G01"
+    },
+    "receiver_clock_jump": {
+      "epoch_s": 180,
+      "offset_s": 1e-07,
+      "scope": "ALL_SATELLITES"
+    },
+    "single_satellite_slip": {
+      "band": "L1C",
+      "cycles": 1,
+      "epoch_s": 240,
+      "sat": "G01"
+    }
+  },
+  "epochs_s": [
+    0,
+    30,
+    75,
+    120,
+    180,
+    240,
+    300,
+    360,
+    420,
+    480,
+    540
+  ],
+  "frequencies_hz": {
+    "L1C": 1575420000.0,
+    "L2W": 1227600000.0
+  },
+  "speed_of_light_mps": 299792458.0,
+  "time_scale": "GPS seconds from 2026-09-23T00:00:00Z",
+  "title": "\u8f7d\u6ce2\u65ad\u70b9\u53f0\uff1aGNSS \u5468\u8df3\u5019\u9009\u3001\u591a\u9891\u7ec4\u5408\u4e0e\u5f27\u6bb5\u4fee\u8ba2\u53f2",
+  "wavelengths_m": {
+    "L1C": 0.19029367279836487,
+    "L2W": 0.24421021342456825
+  }
+}
