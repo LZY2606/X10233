@@ -1,0 +1,26 @@
+[package]
+name = "cycle_slip_bench"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first GNSS carrier-phase cycle-slip candidate review (carrier-break workbench)"
+
+[[bin]]
+name = "cycle_slip_bench"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "=0.8.9", features = ["macros"] }
+tokio = { version = "=1.53.1", features = ["rt-multi-thread", "macros", "net", "sync"] }
+rusqlite = { version = "=0.37.0", features = ["bundled"] }
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+tower = { version = "=0.5.3" }
+
+[dev-dependencies]
+tempfile = "=3.27.0"
+
+[profile.dev]
+opt-level = 0
+
+# Fixed offline install/build command: `cargo build --all-targets`
+# Demo command: `cargo test --all-targets; cargo run -- --addr 127.0.0.1:5348`

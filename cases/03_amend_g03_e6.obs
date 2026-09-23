@@ -1,0 +1,4 @@
+# Local source amendment: replaces ONLY G03 e6 carrier phases.
+AMEND target=G03 epoch_idx=6 mode=supersede_direct_source reason=re-surveyed_phase_readout
+OBS G03 L1 P1=20298322.458 L1=213668407.469 D1=36.785 S1=8 LLI1=0
+OBS G03 L2 P2=20298322.458 L2=167118239.249 D2=28.664 S2=7 LLI2=0

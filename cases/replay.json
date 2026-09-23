@@ -1,0 +1,90 @@
+{
+  "case_id": "carrier-break-bench-001",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "seed": 20260923,
+  "virtual_clock": {
+    "origin_iso": "2026-09-23T01:00:00Z",
+    "epoch_seconds": [
+      0,
+      30,
+      60,
+      120,
+      150,
+      210,
+      240,
+      270
+    ]
+  },
+  "steps": [
+    {
+      "seq": 1,
+      "kind": "import",
+      "label": "initial-import",
+      "file": "01_baseline.obs",
+      "kind_detail": "raw observations + header + clock event, stored verbatim"
+    },
+    {
+      "seq": 2,
+      "kind": "revise_params",
+      "label": "tighten-gf-threshold",
+      "params": {
+        "gf_threshold_m": 0.02,
+        "mw_threshold_cy": 0.25,
+        "td_threshold_cy": 0.3,
+        "clock_threshold_m": 100000.0,
+        "max_lattice_n": 5
+      }
+    },
+    {
+      "seq": 3,
+      "kind": "revert_params",
+      "label": "restore-default-params"
+    },
+    {
+      "seq": 4,
+      "kind": "amend_source",
+      "label": "amend-only-G03-e6",
+      "file": "03_amend_g03_e6.obs"
+    },
+    {
+      "seq": 5,
+      "kind": "fork",
+      "label": "decision-fork",
+      "fork_name": "review-fork"
+    },
+    {
+      "seq": 6,
+      "kind": "decide",
+      "label": "accept-1-0-on-fork",
+      "on_branch": "review-fork",
+      "sat": "G02",
+      "epoch_idx": 6,
+      "pair": [
+        1,
+        0
+      ],
+      "decision": "accept"
+    },
+    {
+      "seq": 7,
+      "kind": "decide",
+      "label": "accept-0--1-on-main",
+      "sat": "G02",
+      "epoch_idx": 6,
+      "pair": [
+        0,
+        -1
+      ],
+      "decision": "accept"
+    }
+  ],
+  "expectations": {
+    "uneven_epochs": "gap seconds [30,30,60,30,60,30,30] are recorded, no equal-spacing assumption",
+    "missing_frequency": "G02 L2 absent at epoch idx=4 -> band gap, split L2 arc",
+    "receiver_clock_jump": "common step ~299792.458 m code / integer cycles phase at idx=5, scope=receiver, not a satellite slip",
+    "single_sat_slip": "G03 idx=6 integer pair (2,1) baseline -> (3,2) after local amendment",
+    "lli_false_positive": "G02 idx=7 LLI bit set with no phase step -> candidate rejected",
+    "multiple_tied_offsets": "G02 idx=6 GF lattice contains both (1,0) and (0,-1), MW=1, TD unavailable -> ambiguous",
+    "arc_local_expiry": "G03 amendment expires only G03 arcs/residuals/candidates; G01/G02/R07 stay current"
+  }
+}
