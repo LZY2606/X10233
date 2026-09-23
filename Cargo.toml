@@ -1,0 +1,25 @@
+[package]
+name = "carrier_break_desk"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first GNSS carrier-phase cycle-slip candidate and arc revision desk"
+license = "MIT"
+
+[lib]
+name = "carrier_break_desk"
+path = "src/lib.rs"
+
+[[bin]]
+name = "carrier-break-desk"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "time" }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+rusqlite = { version = "0.32", features = ["bundled"]}
+sha1 = "0.10"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "time" }
