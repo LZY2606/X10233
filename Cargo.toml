@@ -1,0 +1,24 @@
+[package]
+name = "gsb-cycle-slip"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first GNSS carrier-phase cycle-slip review workbench (RINEX observations, multi-frequency combinations, arc revision history)"
+
+[[bin]]
+name = "gsb-cycle-slip"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+sha2 = "0.10"
+hex = "0.4"
+thiserror = "1"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["fs"] }
+
+[dev-dependencies]
+tempfile = "3"
