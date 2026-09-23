@@ -1,0 +1,96 @@
+{
+  "main": [
+    {
+      "step": 1,
+      "action": "import",
+      "file": "CBST00JPN_R_20262570200_01H_MO.rnx",
+      "state": "satellite_state.txt",
+      "check": "raw_verbatim"
+    },
+    {
+      "step": 2,
+      "action": "review",
+      "scope": "G03@k6",
+      "note": "LLI bit set but clean phase"
+    },
+    {
+      "step": 3,
+      "action": "reject",
+      "candidate_ref": "lli:G03:L1C:20",
+      "reason": "ll_false_positive_clean_combinations"
+    },
+    {
+      "step": 4,
+      "action": "revise_params",
+      "params": {
+        "gf_tol_cyc": 0.4
+      },
+      "note": "parameter revision; dependent results recomputed, history kept"
+    },
+    {
+      "step": 5,
+      "action": "accept",
+      "candidate_ref": "gf_td:G02:L1C/L2W:18:(3,2)",
+      "offset_layer": {
+        "L1C": 3,
+        "L2W": 2
+      }
+    },
+    {
+      "step": 6,
+      "action": "accept",
+      "candidate_ref": "mw:G01:WL:18:7",
+      "note": "conflicting human decision branch point"
+    },
+    {
+      "step": 7,
+      "action": "accept",
+      "candidate_ref": "gf_td:G01:L1C/L2W:18:(7,5)",
+      "supersedes_step": 6,
+      "note": "conflict resolution written to history"
+    },
+    {
+      "step": 8,
+      "action": "import",
+      "file": "CBST00JPN_R_20262570200_01H_MO_amend01.rnx",
+      "amendment": true,
+      "check": "only_G01_dependent_results_go_stale"
+    },
+    {
+      "step": 9,
+      "action": "export",
+      "then": "delete_local_db",
+      "then_import": true,
+      "check": "identities_order_provenance_preserved"
+    }
+  ],
+  "branch_detector_disagreement": [
+    {
+      "step": 1,
+      "action": "import",
+      "file": "CBST00JPN_R_20262570200_01H_MO_branch02.rnx",
+      "state": "satellite_state.txt"
+    },
+    {
+      "step": 2,
+      "action": "review",
+      "scope": "G09@k2",
+      "note": "GF half-tie (1,0)/(1,1); TD unique; MW zero"
+    },
+    {
+      "step": 3,
+      "action": "accept",
+      "candidate_ref": "gf:G09:L1C/L2W:4:(1,0)"
+    },
+    {
+      "step": 4,
+      "action": "fork"
+    },
+    {
+      "step": 5,
+      "action": "accept",
+      "candidate_ref": "gf:G09:L1C/L2W:4:(1,1)",
+      "note": "legal equipartition alternative kept; fork retained"
+    }
+  ]
+}

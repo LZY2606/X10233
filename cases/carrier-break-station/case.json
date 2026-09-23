@@ -1,0 +1,70 @@
+{
+  "case_pack": "carrier-break-station",
+  "counter_examples": [
+    "uneven_epochs",
+    "frequency_missing",
+    "receiver_clock_jump",
+    "single_sat_cycle_slip",
+    "lli_false_positive",
+    "multiple_equipartition_integer_offsets",
+    "arc_local_expiry",
+    "detector_disagreement"
+  ],
+  "files": {
+    "base_rinex": "CBST00JPN_R_20262570200_01H_MO.rnx",
+    "detector_branch": "CBST00JPN_R_20262570200_01H_MO_branch02.rnx",
+    "dossier": "DOSSIER.md",
+    "expected": "expected.json",
+    "playbook": "playbook.json",
+    "satellite_state": "satellite_state.txt",
+    "source_amendment": "CBST00JPN_R_20262570200_01H_MO_amend01.rnx"
+  },
+  "frequencies_hz": {
+    "L1": 1575420000.0,
+    "L2": 1227600000.0
+  },
+  "observation_codes": [
+    "C1C",
+    "L1C",
+    "D1C",
+    "C2W",
+    "L2W",
+    "D2W"
+  ],
+  "satellites": [
+    "G01",
+    "G02",
+    "G03"
+  ],
+  "seed": "fixed:no-rng:constants-only",
+  "station": "CBST00JPN",
+  "time_base": {
+    "datum": "ITRF2014",
+    "epoch_offsets_s": [
+      0,
+      2,
+      4,
+      6,
+      16,
+      18,
+      20,
+      22,
+      24
+    ],
+    "first_epoch": "2026-09-14T02:00:00",
+    "frame_epoch": "2020.0",
+    "scale": "GPS"
+  },
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "units": {
+    "carrier": "cycle (RINEX L*)",
+    "clock": "s",
+    "doppler": "Hz (RINEX D*)",
+    "frequency": "MHz",
+    "lli": "RINEX LLI flag 0..7 (loss-of-lock indicator)",
+    "pseudorange": "cycle (code observation, RINEX C*)",
+    "snr": "RINEX signal strength 1..9 (S map kept verbatim)",
+    "wavelength": "m"
+  },
+  "version": "2026.09.14-r1"
+}

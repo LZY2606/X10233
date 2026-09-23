@@ -1,0 +1,89 @@
+{
+  "clock_jump": {
+    "at_second": 16,
+    "magnitude_s": 0.002,
+    "scope": "RECEIVER"
+  },
+  "dp_mw_half_m": -4.740551201771032,
+  "epochs_s": [
+    0,
+    2,
+    4,
+    6,
+    16,
+    18,
+    20,
+    22,
+    24
+  ],
+  "expectations": [
+    {
+      "assert": "dt used per pair; no assumed constant cadence",
+      "gap_s_between_k3_k4": 10,
+      "id": "uneven_epochs"
+    },
+    {
+      "assert": "epoch retained; L1-only values present; pair status UNKNOWN",
+      "id": "frequency_missing",
+      "missing_codes": [
+        "C2W",
+        "L2W",
+        "D2W"
+      ],
+      "sat": "G01",
+      "second": 20
+    },
+    {
+      "assert": "all satellites flagged; separated from single-sat slips; GF unchanged",
+      "at_second": 16,
+      "id": "receiver_clock_jump"
+    },
+    {
+      "assert": "GF and TD unique; no clock flag",
+      "id": "single_sat_cycle_slip_g02",
+      "offset": {
+        "L1C": 3,
+        "L2W": 2
+      },
+      "second": 18
+    },
+    {
+      "assert": "LLI candidate retained and rejected; clean combination evidence kept",
+      "code": "L1C",
+      "id": "lli_false_positive",
+      "sat": "G03",
+      "second": 20
+    },
+    {
+      "assert": "two equal-score legal integer offsets both retained",
+      "id": "mw_equipartition",
+      "mw_wl_candidates": [
+        7,
+        8
+      ],
+      "sat": "G01",
+      "second": 18
+    },
+    {
+      "assert": "GF and TD agree; conflicts with MW tie -> human resolution",
+      "id": "gf_td_unique_g01",
+      "offset": {
+        "L1C": 7,
+        "L2W": 5
+      },
+      "sat": "G01",
+      "second": 18
+    },
+    {
+      "amendment_file": "CBST00JPN_R_20262570200_01H_MO_amend01.rnx",
+      "assert": "only dependent G01 pair/arcs stale; others stay current",
+      "changed_raw": [
+        "G01:L2W:20"
+      ],
+      "id": "arc_local_expiry"
+    }
+  ],
+  "lambda1_m": 0.19029367279836487,
+  "lambda2_m": 0.24421021342456825,
+  "wl_cycles_per_m": 1.1602026359182123
+}

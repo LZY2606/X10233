@@ -1,0 +1,13 @@
+# Satellite state / signal inventory for the carrier-break station
+# epoch_gpst_base: 2026-09-14T02:00:00 (GPS time, seconds column)
+# datum: ITRF2014 (frame epoch 2020.0); units: freq MHz, wavelength m
+# system sat code frequency_MHz frequency_number wavelength_m
+G G01 1575.420 1 0.1902936728
+G G01 1227.600 1 0.2442102134
+G G02 1575.420 1 0.1902936728
+G G02 1227.600 1 0.2442102134
+G G03 1575.420 1 0.1902936728
+G G03 1227.600 1 0.2442102134
+# clock jump event (whole receiver): at gpst+16s, +2.000000000e-3 s
+CLOCK_EVENT kind=JUMP at_second=16 magnitude_s=0.002000000 scope=RECEIVER
+END OF STATE
