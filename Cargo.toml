@@ -1,0 +1,22 @@
+[package]
+name = "carrier-break-station"
+version = "0.1.0"
+edition = "2021"
+description = "载波断点台：本地优先的 GNSS 载波相位周跳候选、多频组合与弧段修订史"
+
+[[bin]]
+name = "cbs"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "0.8", features = ["macros"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "net", "sync", "time"] }
+tower-http = { version = "0.6", features = ["fs", "trace"] }
+rusqlite = { version = "0.40", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.11"
+once_cell = "1"
+
+[dev-dependencies]
+tempfile = "3"
