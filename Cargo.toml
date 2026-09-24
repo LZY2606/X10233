@@ -1,0 +1,29 @@
+[package]
+name = "cycle_slip_bench"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "cycle_slip_bench"
+path = "src/lib.rs"
+
+[[bin]]
+name = "cycle_slip_bench"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+tokio = { version = "1", features = ["full"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tower = "0.5"
+tower-http = { version = "0.6", features = ["fs", "trace"] }
+clap = { version = "4", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[dev-dependencies]
+tempfile = "3"
