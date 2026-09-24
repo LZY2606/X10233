@@ -1,0 +1,72 @@
+{
+  "id": "carrier-breakpoint-2024-03-15-CB01",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "format": "cbf-v1",
+  "station": "CB01",
+  "seed": 731979,
+  "time_datum": "gps_seconds_since_2000-01-01",
+  "coordinate_datum": "ITRF2020",
+  "units": {
+    "pseudorange": "m",
+    "carrier_phase": "cycle",
+    "doppler": "Hz",
+    "snr": "dBHz",
+    "lli": "RINEX-style bitmask",
+    "frequency": "Hz",
+    "wavelength": "m",
+    "clock_delta": "ns"
+  },
+  "steps": [
+    {
+      "order": 1,
+      "kind": "import",
+      "file": "v1-baseline.cbf",
+      "label": "baseline: every epoch stored verbatim",
+      "asserts": [
+        "pseudorange/carrier/doppler/LLI/SNR/frequency code/unit tokens preserved",
+        "declared receiver clock jump present at 2024-03-15T00:01:30.000",
+        "G02 carries a genuine 7-cycle L1 slip at the same epoch as the clock event",
+        "G03 LLI bit set at 00:01:30 but no numeric slip (false positive)",
+        "G03 L2 missing at 2024-03-15T00:02:30.000"
+      ]
+    },
+    {
+      "order": 2,
+      "kind": "param_revision",
+      "label": "tighten TD tolerance 0.25 -> 0.12 cycles",
+      "effect": "forks derived layer; only statistics depending on the TD threshold change"
+    },
+    {
+      "order": 3,
+      "kind": "import",
+      "file": "v2-tail-unequal.cbf",
+      "label": "local source patch: 75 s unequal tail + missing frequency",
+      "asserts": [
+        "irregular-gap edge flagged but arcs do not silently merge",
+        "only results depending on the tail edge go stale"
+      ]
+    },
+    {
+      "order": 4,
+      "kind": "decision",
+      "label": "accept G02 +7 cycle L1 repair hypothesis (offset layer only)",
+      "asserts": ["raw G02 phase token remains unchanged"]
+    },
+    {
+      "order": 5,
+      "kind": "decision",
+      "fork_from": "before_step_4",
+      "label": "conflicting decision on a fork: reject the same hypothesis",
+      "asserts": [
+        "accepted and rejected outcomes both retained",
+        "checking out either event restores its dependencies and conclusion"
+      ]
+    }
+  ],
+  "detector_contract": [
+    "TD, geometry-free ionosphere combination and Melbourne-Wubbena may disagree; none is truth",
+    "receiver clock jumps are separate from single-satellite cycle slips",
+    "repairs exist only in an offset layer",
+    "all legal integer hypotheses are retained when underdetermined"
+  ]
+}
