@@ -1,0 +1,16 @@
+[package]
+name = "gnss-slip-review"
+version = "0.1.0"
+edition = "2021"
+description = "本地优先的 GNSS 载波相位周跳审阅台（RINEX 导入 / 多检测器候选 / 弧段修订史）"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+
+[dev-dependencies]
+tempfile = "3"
