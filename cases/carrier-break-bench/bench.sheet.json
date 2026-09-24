@@ -1,0 +1,1136 @@
+{
+  "format": "gsb-obs-sheet/1",
+  "seed": 20260924,
+  "station": "BENCH",
+  "epochs": [
+    {
+      "epoch": "2026-09-24T09:00:00.0000",
+      "gps_seconds": 1474275600.0,
+      "receiver_clock_seconds": 0.0,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21000005.0,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21000008.235
+            },
+            {
+              "code": "L1W",
+              "value": 110780486.5648,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 86436183.7659,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 22500005.0,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 22500008.235
+            },
+            {
+              "code": "L1W",
+              "value": 118663040.7677,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 92578564.0149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20100005.0,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20100008.235
+            },
+            {
+              "code": "L1W",
+              "value": 106050956.6431,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 82751096.2165,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:00:30.0000",
+      "gps_seconds": 1474275630.0,
+      "receiver_clock_seconds": 0.0,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20982005.006,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20982008.245
+            },
+            {
+              "code": "L1W",
+              "value": 110685895.8948,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 86362476.7344,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 22487405.006,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 22487408.245
+            },
+            {
+              "code": "L1W",
+              "value": 118596827.2892,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 92526969.0807,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20110505.006,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20110508.245
+            },
+            {
+              "code": "L1W",
+              "value": 106106134.484,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 82794091.9208,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:01:17.0000",
+      "gps_seconds": 1474275677.0,
+      "receiver_clock_seconds": 0.0,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20953805.015,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20953808.26
+            },
+            {
+              "code": "L1W",
+              "value": 110537703.8452,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 86247002.3852,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 22467665.015,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 22467668.26
+            },
+            {
+              "code": "L1W",
+              "value": 118493092.8397,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 92446137.0172,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20126955.015,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20126958.26
+            },
+            {
+              "code": "L1W",
+              "value": 106192579.768,
+              "lli": 1,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 82861451.8575,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:02:18.0000",
+      "gps_seconds": 1474275738.0,
+      "receiver_clock_seconds": 0.0,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20917205.028,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20917208.28
+            },
+            {
+              "code": "L1W",
+              "value": 110345369.483,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 86097131.4212,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 22442045.028,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 22442048.28
+            },
+            {
+              "code": "L1W",
+              "value": 118358458.7669,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 92341227.3178,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 20148305.028,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 20148308.28
+            },
+            {
+              "code": "L1W",
+              "value": 106304774.7112,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 82948876.4562,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:02:48.0000",
+      "gps_seconds": 1474275768.0,
+      "receiver_clock_seconds": 0.0033356,
+      "clock_event": {
+        "declared": true,
+        "jump_seconds": 0.0033356
+      },
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21899192.757,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21899196.013
+            },
+            {
+              "code": "L1W",
+              "value": 115505749.765,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 90118206.9498,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 23429432.757,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 23429436.013
+            },
+            {
+              "code": "L1W",
+              "value": 123547216.2404,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 96384414.9436,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21158792.757,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21158796.013
+            },
+            {
+              "code": "L1W",
+              "value": 111614923.5041,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 87086654.7205,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:03:19.0000",
+      "gps_seconds": 1474275799.0,
+      "receiver_clock_seconds": 0.0033356,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21880592.763,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21880596.023
+            },
+            {
+              "code": "L1W",
+              "value": 115408006.0727,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 90042043.0173,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 2456.8997
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 23416412.763,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 23416416.023
+            },
+            {
+              "code": "L1W",
+              "value": 123478796.6461,
+              "lli": 1,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 96331100.1783,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21169642.763,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21169646.023
+            },
+            {
+              "code": "L1W",
+              "value": 111671940.6063,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 87131083.6149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:04:04.0000",
+      "gps_seconds": 1474275844.0,
+      "receiver_clock_seconds": 0.0033356,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21853592.772,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": null,
+              "diagnostic": "missing-frequency: no L2 code at this epoch"
+            },
+            {
+              "code": "L1W",
+              "value": 115266120.5678,
+              "lli": 1,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": null,
+              "lli": 0,
+              "ssi": 6,
+              "diagnostic": "missing-frequency: no L2 phase at this epoch"
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": null,
+              "diagnostic": "missing-frequency: no L2 doppler at this epoch"
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 23397512.772,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 23397516.038
+            },
+            {
+              "code": "L1W",
+              "value": 123379476.4284,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 96253707.7771,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21185392.772,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21185396.038
+            },
+            {
+              "code": "L1W",
+              "value": 111754707.3677,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 87195577.1713,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "epoch": "2026-09-24T09:04:37.0000",
+      "gps_seconds": 1474275877.0,
+      "receiver_clock_seconds": 0.0033356,
+      "clock_event": null,
+      "satellites": [
+        {
+          "sv": "G01",
+          "azimuth_deg": 42.0,
+          "elevation_deg": 55.0,
+          "ecef_m": [
+            13475000.0,
+            14532000.0,
+            18674000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21833795.278,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": null,
+              "diagnostic": "missing-frequency: no L2 code at this epoch"
+            },
+            {
+              "code": "L1W",
+              "value": 115162070.8308,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": null,
+              "lli": 0,
+              "ssi": 6,
+              "diagnostic": "missing-frequency: no L2 phase at this epoch"
+            },
+            {
+              "code": "D1W",
+              "value": 3153.0213,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": null,
+              "diagnostic": "missing-frequency: no L2 doppler at this epoch"
+            }
+          ]
+        },
+        {
+          "sv": "G02",
+          "azimuth_deg": 120.0,
+          "elevation_deg": 38.0,
+          "ecef_m": [
+            -17234000.0,
+            13011000.0,
+            15920000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 23383652.778,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 23383656.049
+            },
+            {
+              "code": "L1W",
+              "value": 123306641.6021,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 96196953.3495,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": 2207.1149,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": 1719.8298
+            }
+          ]
+        },
+        {
+          "sv": "G03",
+          "azimuth_deg": 210.0,
+          "elevation_deg": 62.0,
+          "ecef_m": [
+            9123400.0,
+            -20111000.0,
+            16771000.0
+          ],
+          "obs": [
+            {
+              "code": "C1W",
+              "value": 21196942.778,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "C2W",
+              "value": 21196946.049
+            },
+            {
+              "code": "L1W",
+              "value": 111815402.9926,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "L2W",
+              "value": 87242872.446,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D1W",
+              "value": -1839.2624,
+              "lli": 0,
+              "ssi": 6
+            },
+            {
+              "code": "D2W",
+              "value": -1433.1915
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
