@@ -1,0 +1,283 @@
+{
+  "case_id": "carrier-break-station",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "narrative": "测量团队导入 RINEX 观测历元和卫星状态，逐站星频率弧段审阅周跳候选与修复假设。",
+  "constants": {
+    "c": 299792458.0,
+    "f1_hz": 1575420000.0,
+    "f2_hz": 1227600000.0,
+    "lambda1_m": 0.19029367279836487,
+    "lambda2_m": 0.24421021342456825,
+    "gamma": 1.6469444444444448,
+    "wl_lambda_m": 0.8619184003220056
+  },
+  "params_v1": {
+    "algo_version": "csbench.core/1.0.0",
+    "gf_sigma_m": 0.1,
+    "mw_sigma_m": 0.1,
+    "td_sigma_cycles": 0.5,
+    "mw_envelope_m": 0.25,
+    "clock_sigma_m": 500.0,
+    "gap_factor": 5.0,
+    "max_lattice": 3
+  },
+  "params_v2": {
+    "algo_version": "csbench.core/1.0.0",
+    "gf_sigma_m": 0.15,
+    "mw_sigma_m": 0.15,
+    "td_sigma_cycles": 0.5,
+    "mw_envelope_m": 0.25,
+    "clock_sigma_m": 500.0,
+    "gap_factor": 5.0,
+    "max_lattice": 3
+  },
+  "steps": [
+    {
+      "id": "s1-import-baseline",
+      "kind": "import_input",
+      "file": "input-v1.txt",
+      "title": "初始导入：8 个历元、G01/G02/G03 双频全量，无周跳",
+      "expect": {
+        "epochs": 8,
+        "satellites": [
+          "G01",
+          "G02",
+          "G03"
+        ],
+        "open_findings": 0,
+        "raw_presence": [
+          "code",
+          "phase",
+          "doppler",
+          "lli",
+          "cnr",
+          "clock_events",
+          "frequency_numbers",
+          "obs_codes"
+        ]
+      }
+    },
+    {
+      "id": "s2-param-revision",
+      "kind": "revise_params",
+      "params": {
+        "algo_version": "csbench.core/1.0.0",
+        "gf_sigma_m": 0.15,
+        "mw_sigma_m": 0.15,
+        "td_sigma_cycles": 0.5,
+        "mw_envelope_m": 0.25,
+        "clock_sigma_m": 500.0,
+        "gap_factor": 5.0,
+        "max_lattice": 3
+      },
+      "title": "参数修订：GF/MW 容差 GF 0.10→0.15m、MW 0.10→0.15m（父版本保留，等分候选随之增多）",
+      "expect": {
+        "param_fingerprint_changes": true,
+        "old_context_still_viewable": true
+      }
+    },
+    {
+      "id": "s3-local-source-change",
+      "kind": "import_input",
+      "file": "input-v3.txt",
+      "title": "局部源数据改动：G03 在 e3 缺失 L2（频率缺失 + 弧段边界 + 局部过期）",
+      "expect": {
+        "missing_key": "G03@e3/L2W",
+        "stale_subjects": [
+          "G03"
+        ],
+        "current_subjects": [
+          "G01",
+          "G02"
+        ],
+        "arc_boundary": {
+          "sat": "G03",
+          "band": "L2",
+          "epoch": "2026-01-04T00:01:45"
+        }
+      },
+      "note": "版本号 v2 保留给参数修订，输入快照编号沿用 v1/v3...以便对照文件名"
+    },
+    {
+      "id": "s4-receiver-clock-jump",
+      "kind": "import_input",
+      "file": "input-v4.txt",
+      "title": "整机钟跳：e4 全星码相共同跳 1000us，仅产生钟跳事件，不产生单星周跳",
+      "expect": {
+        "clock_findings": 1,
+        "slip_findings": 0,
+        "clock_epoch": "2026-01-04T00:02:15",
+        "clock_event_us": 1000
+      }
+    },
+    {
+      "id": "s5-lli-false-alarm",
+      "kind": "import_input",
+      "file": "input-v5.txt",
+      "title": "LLI 误报：G03@e3 L1 置 LLI=1，但码/相连续；候选保留并被拒绝",
+      "expect": {
+        "lli_only_candidates": 1,
+        "lli_only_status": "rejected_continuous",
+        "candidate_retained": true
+      }
+    },
+    {
+      "id": "s6-single-sat-slip",
+      "kind": "import_input",
+      "file": "input-v6.txt",
+      "title": "单星周跳：G02@e4 L1+3 / L2+2（与整机钟跳同历元，必须分开）",
+      "expect": {
+        "slip_findings": 1,
+        "sat": "G02",
+        "epoch": "2026-01-04T00:02:15",
+        "legal_candidates": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "td_best": [
+          3,
+          2
+        ],
+        "uniquely_identified": [
+          3,
+          2
+        ],
+        "clock_findings": 1,
+        "clock_kept_separate": true,
+        "decision": "accept",
+        "repair_layer_only": true,
+        "accepted_offsets": {
+          "L1": 3,
+          "L2": 2
+        }
+      }
+    },
+    {
+      "id": "s7-ambiguous-equal-splits",
+      "kind": "import_input",
+      "file": "input-v7.txt",
+      "title": "多个等分整周偏移：G01@e5 相邻候选相差 (1,1)；GF/MW 给 5 个等分候选，Doppler 时间差分因 45s 间隔与小加速度偏向另一处，不以任一检测器当真值",
+      "expect": {
+        "slip_findings_for": "G01",
+        "epoch": "2026-01-04T00:03:00",
+        "gf_candidates": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "mw_candidates": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "td_raw_cycles_approx": [
+          4.53,
+          3.39
+        ],
+        "td_best": [
+          5,
+          3
+        ],
+        "td_not_in_legal": true,
+        "legal_candidates": [
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            4
+          ],
+          [
+            6,
+            5
+          ]
+        ],
+        "equal_split_step": [
+          1,
+          1
+        ],
+        "decision_a_branch": "main",
+        "decision_a": [
+          4,
+          3
+        ],
+        "decision_b_branch": "alt",
+        "decision_b": [
+          3,
+          2
+        ]
+      }
+    },
+    {
+      "id": "s8-history-rewind",
+      "kind": "rewind",
+      "target_step": "s3-local-source-change",
+      "title": "回到旧事件：恢复当时的输入版本/参数指纹与可见结论，不被最新结果覆盖",
+      "expect": {
+        "shows_context_of": "s3-local-source-change",
+        "latest_unchanged": true
+      }
+    }
+  ]
+}
