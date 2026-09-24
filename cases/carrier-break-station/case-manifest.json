@@ -1,0 +1,35 @@
+{
+  "case_id": "carrier-break-station-2026-09-25",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "seed": "fixed-20260925-gsb",
+  "time_model": "virtual-deterministic",
+  "network": "offline-only",
+  "baseline": {
+    "observations": "observations-v1.rnx",
+    "satellite_status": "satellite-status.txt",
+    "preservation_policy": "pseudorange, carrier, Doppler, LLI, C/N0, clock events, frequency number, and observation codes are stored exactly as pasted per epoch"
+  },
+  "replay_steps": [
+    {"order": 1, "kind": "initial-import", "source": "observations-v1.rnx", "expected": "raw preservation and initial candidates"},
+    {"order": 2, "kind": "parameter-revision", "field": "integer_search_radius", "from": 1, "to": 6, "expected": "additional equal legal integer hypotheses remain visible"},
+    {"order": 3, "kind": "local-source-revision", "source": "observations-v2.rnx", "changed_locator": "epoch=2026-09-25T00:00:42,sat=G01,code=D1", "expected": "only G01 L1 dependent derived rows expire; G02 and G03 remain reusable"},
+    {"order": 4, "kind": "conflicting-human-decision", "target": "G02 final-epoch L1/L2 candidates", "expected": "accept and then override produce offset-layer events without deleting the prior decision"}
+  ],
+  "situations": ["unequal-epoch-intervals", "missing-frequency", "receiver-clock-jump", "single-satellite-cycle-slip", "lli-false-alarm", "multiple-equidistant-integer-offsets", "local-arc-expiration"],
+  "domain_rules": [
+    {"id": "detectors-are-evidence", "judgment": "ionosphere-combination, Melbourne-Wubbena, and time-difference may return different candidates; no detector is treated as truth"},
+    {"id": "clock-vs-single-satellite", "judgment": "receiver-wide clock events are separated from a satellite-specific cycle slip"},
+    {"id": "repair-is-offset-only", "judgment": "accepted repairs are stored only as offset layers and never overwrite carrier raw fields"},
+    {"id": "all-legal-candidates", "judgment": "when integer selection is not unique, all legal candidates and rejection reasons are retained"}
+  ],
+  "units_and_datum": {
+    "pseudorange": "m",
+    "carrier": "cycle",
+    "Doppler": "Hz",
+    "signal_strength": "dBHz",
+    "frequency": "MHz",
+    "clock_event_delta": "second",
+    "satellite_coordinates": "ITRF2020 metre",
+    "time": "GPST ISO-like timestamp"
+  }
+}

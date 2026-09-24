@@ -1,0 +1,19 @@
+[package]
+name = "carrier-break-station"
+version = "0.1.0"
+edition = "2021"
+description = "Local-first GNSS carrier-phase cycle-slip review station"
+
+[[bin]]
+name = "carrier-break-station"
+path = "src/main.rs"
+
+[dependencies]
+axum = { version = "0.7", features = ["macros"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "signal", "sync"] }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "sync"] }
