@@ -1,0 +1,26 @@
+[package]
+name = "carrier-gsb"
+version = "0.1.0"
+edition = "2021"
+description = "本地优先的 GNSS 载波相位周跳候选审阅与弧段修订系统"
+
+[dependencies]
+axum = { version = "0.8.9", features = ["macros"] }
+tokio = { version = "1.53.1", features = ["rt-multi-thread", "macros", "net", "sync"] }
+rusqlite = { version = "0.37.0", features = ["bundled"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.151"
+sha2 = "0.10.9"
+hex = "0.4.3"
+tower = "0.5.3"
+tower-http = { version = "0.6.11", features = ["fs"] }
+
+[dev-dependencies]
+tempfile = "3.27.0"
+
+[profile.dev]
+opt-level = 1
+
+[[bin]]
+name = "carrier-gsb"
+path = "src/main.rs"
