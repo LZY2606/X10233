@@ -1,0 +1,15 @@
+{
+  "schema_version": "carrier-break-revision/v1",
+  "revision_id": "parameter-relax-ionosphere-v1",
+  "parent_event_id": "import-0001",
+  "kind": "parameter_revision",
+  "summary": "放宽电离层组合阈值，重算全部检测器；时间差分和 Melbourne-Wubbena 参数保持不变。",
+  "parameters": {
+    "algorithm_version": "carrier-break-engine-2026.09.1",
+    "iono_cycles_threshold": 0.6,
+    "mw_cycles_threshold": 0.45,
+    "time_difference_cycles_threshold": 0.45,
+    "lli_score_weight": 0.35,
+    "tie_half_cycle": 0.5
+  }
+}

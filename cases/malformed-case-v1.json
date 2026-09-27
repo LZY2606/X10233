@@ -1,0 +1,12 @@
+{
+  "schema_version": "carrier-break-case/v1",
+  "case_id": "malformed-missing-code",
+  "epochs": [],
+  "satellites": [],
+  "observations": [
+    ["E01", "G01", null, 1, "123.4", "m", 0, null]
+  ],
+  "station": {
+    "id": "STA01"
+  }
+}

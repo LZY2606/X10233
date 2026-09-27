@@ -1,0 +1,16 @@
+{
+  "schema_version": "carrier-break-revision/v1",
+  "revision_id": "source-g01-s1w-raw-recovery-v1",
+  "parent_event_id": "parameter-0002",
+  "kind": "source_revision",
+  "summary": "只恢复 G01 在 E03 的 S1W 原始信噪比文本；不得重写已提交基线，只创建带父版本关系的新源版本。",
+  "observation_key": {
+    "epoch_id": "E03",
+    "satellite": "G01",
+    "observation_code": "S1W",
+    "frequency_number": 1
+  },
+  "raw_text": "42.0",
+  "unit": "dB-Hz",
+  "lli": 0
+}

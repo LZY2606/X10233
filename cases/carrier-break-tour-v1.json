@@ -1,0 +1,1233 @@
+{
+  "schema_version": "carrier-break-case/v1",
+  "case_id": "carrier-break-tour-v1",
+  "title": "载波断点台：GNSS 周跳候选、多频组合与弧段修订史",
+  "narrative": "测量团队导入小型 RINEX 观测历元与卫星状态，按站-星-频率弧段审阅周跳候选、修复偏移和冲突决定。",
+  "coordinate_reference": "ITRF2014",
+  "time_scale": "UTC virtual laboratory clock",
+  "seed": 20260927,
+  "station": {
+    "id": "STA01",
+    "name": "Station Alpha",
+    "receiver": "Virtual RINEX Receiver",
+    "antenna": "Virtual Antenna",
+    "position_m": [
+      4000000.0,
+      300000.0,
+      4900000.0
+    ],
+    "coordinate_reference": "ITRF2014"
+  },
+  "frequencies": [
+    {
+      "constellation": "GPS",
+      "frequency_number": 1,
+      "code": "1W",
+      "carrier_hz": 1575420000.0,
+      "wavelength_m": 0.1902936728
+    },
+    {
+      "constellation": "GPS",
+      "frequency_number": 2,
+      "code": "2W",
+      "carrier_hz": 1227600000.0,
+      "wavelength_m": 0.2442102134
+    }
+  ],
+  "observation_columns": [
+    "epoch_id",
+    "satellite",
+    "observation_code",
+    "frequency_number",
+    "raw_text",
+    "unit",
+    "lli",
+    "snr_dBHz_text"
+  ],
+  "observations": [
+    [
+      "E01",
+      "G01",
+      "C1W",
+      1,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "L1W",
+      1,
+      "-10510070.9",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "S1W",
+      1,
+      "42.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "C2W",
+      2,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "L2W",
+      2,
+      "-8189665.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G01",
+      "S2W",
+      2,
+      "39.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "C1W",
+      1,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "L1W",
+      1,
+      "-10510070.9",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "S1W",
+      1,
+      "41.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "C2W",
+      2,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "L2W",
+      2,
+      "-8189665.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G02",
+      "S2W",
+      2,
+      "38.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "C1W",
+      1,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "L1W",
+      1,
+      "-10510070.9",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "S1W",
+      1,
+      "43.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "C2W",
+      2,
+      "2000000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "L2W",
+      2,
+      "-8189665.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E01",
+      "G03",
+      "S2W",
+      2,
+      "40.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "C1W",
+      1,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "L1W",
+      1,
+      "-10562621.3",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "S1W",
+      1,
+      "42.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "C2W",
+      2,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "L2W",
+      2,
+      "-8230614.0",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G01",
+      "S2W",
+      2,
+      "39.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "C1W",
+      1,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "L1W",
+      1,
+      "-10562621.3",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "S1W",
+      1,
+      "41.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "C2W",
+      2,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "L2W",
+      2,
+      "-8230614.0",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G02",
+      "S2W",
+      2,
+      "38.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "C1W",
+      1,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "L1W",
+      1,
+      "-10562621.3",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "S1W",
+      1,
+      "43.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "C2W",
+      2,
+      "2010000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "L2W",
+      2,
+      "-8230614.0",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E02",
+      "G03",
+      "S2W",
+      2,
+      "40.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G01",
+      "C1W",
+      1,
+      "2025000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G01",
+      "L1W",
+      1,
+      "-10641446.8",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E03",
+      "G01",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G01",
+      "S1W",
+      1,
+      "LOST",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "C1W",
+      1,
+      "2025000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "L1W",
+      1,
+      "-10641446.8",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "S1W",
+      1,
+      "41.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "C2W",
+      2,
+      "2025000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "L2W",
+      2,
+      "-8292036.5",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G02",
+      "S2W",
+      2,
+      "38.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "C1W",
+      1,
+      "2025000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "L1W",
+      1,
+      "-10641446.8",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "S1W",
+      1,
+      "43.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "C2W",
+      2,
+      "2025000.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "L2W",
+      2,
+      "-8292036.5",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E03",
+      "G03",
+      "S2W",
+      2,
+      "40.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "C1W",
+      1,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "L1W",
+      1,
+      "-10720429.9",
+      "cycles",
+      1,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "S1W",
+      1,
+      "42.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "C2W",
+      2,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "L2W",
+      2,
+      "-8353581.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G01",
+      "S2W",
+      2,
+      "39.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "C1W",
+      1,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "L1W",
+      1,
+      "-10720428.9",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "S1W",
+      1,
+      "41.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "C2W",
+      2,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "L2W",
+      2,
+      "-8353581.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G02",
+      "S2W",
+      2,
+      "38.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "C1W",
+      1,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "L1W",
+      1,
+      "-10720429.4",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "D1W",
+      1,
+      "-5255.0",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "S1W",
+      1,
+      "43.0",
+      "dB-Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "C2W",
+      2,
+      "2040030.0",
+      "m",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "L2W",
+      2,
+      "-8353581.7",
+      "cycles",
+      0,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "D2W",
+      2,
+      "-4094.8",
+      "Hz",
+      null,
+      null
+    ],
+    [
+      "E04",
+      "G03",
+      "S2W",
+      2,
+      "40.0",
+      "dB-Hz",
+      null,
+      null
+    ]
+  ],
+  "epochs": [
+    {
+      "id": "E01",
+      "timestamp": "2026-09-27T00:00:00Z",
+      "virtual_seconds": 0.0
+    },
+    {
+      "id": "E02",
+      "timestamp": "2026-09-27T00:00:10Z",
+      "virtual_seconds": 10.0
+    },
+    {
+      "id": "E03",
+      "timestamp": "2026-09-27T00:00:25Z",
+      "virtual_seconds": 25.0
+    },
+    {
+      "id": "E04",
+      "timestamp": "2026-09-27T00:00:40Z",
+      "virtual_seconds": 40.0
+    }
+  ],
+  "satellites": [
+    {
+      "id": "G01",
+      "constellation": "GPS",
+      "prn": 1
+    },
+    {
+      "id": "G02",
+      "constellation": "GPS",
+      "prn": 2
+    },
+    {
+      "id": "G03",
+      "constellation": "GPS",
+      "prn": 3
+    }
+  ],
+  "satellite_states": [
+    {
+      "epoch_id": "E01",
+      "satellite": "G01",
+      "position_m": [
+        10049000.0,
+        2000000.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E01",
+      "satellite": "G02",
+      "position_m": [
+        10050000.0,
+        2000000.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E01",
+      "satellite": "G03",
+      "position_m": [
+        10051000.0,
+        2000000.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E02",
+      "satellite": "G01",
+      "position_m": [
+        10049000.0,
+        2000100.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E02",
+      "satellite": "G02",
+      "position_m": [
+        10050000.0,
+        2000100.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E02",
+      "satellite": "G03",
+      "position_m": [
+        10051000.0,
+        2000100.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E03",
+      "satellite": "G01",
+      "position_m": [
+        10049000.0,
+        2000250.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E03",
+      "satellite": "G02",
+      "position_m": [
+        10050000.0,
+        2000250.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E03",
+      "satellite": "G03",
+      "position_m": [
+        10051000.0,
+        2000250.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E04",
+      "satellite": "G01",
+      "position_m": [
+        10049000.0,
+        2000400.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E04",
+      "satellite": "G02",
+      "position_m": [
+        10050000.0,
+        2000400.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    },
+    {
+      "epoch_id": "E04",
+      "satellite": "G03",
+      "position_m": [
+        10051000.0,
+        2000400.0,
+        15000000.0
+      ],
+      "velocity_mps": [
+        0.0,
+        10.0,
+        0.0
+      ],
+      "coordinate_reference": "ECEF/ITRF2014",
+      "clock_bias_s": 0.0,
+      "health": "healthy"
+    }
+  ],
+  "clock_events": [
+    {
+      "id": "CLK-E04-receiver",
+      "epoch_id": "E04",
+      "scope": "receiver",
+      "delta_seconds": 1e-07,
+      "delta_m": 29.9792458,
+      "source_text": "RECEIVER_CLOCK_JUMP +1E-7 s",
+      "applies_to": "all satellites and code/carrier channels"
+    }
+  ],
+  "initial_parameters": {
+    "algorithm_version": "carrier-break-engine-2026.09.1",
+    "iono_cycles_threshold": 0.35,
+    "mw_cycles_threshold": 0.45,
+    "time_difference_cycles_threshold": 0.45,
+    "lli_score_weight": 0.35,
+    "tie_half_cycle": 0.5
+  }
+}
