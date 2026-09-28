@@ -1,0 +1,21 @@
+[package]
+name = "carrier-break-station"
+version = "0.1.0"
+edition = "2021"
+description = "本地优先的 GNSS 载波相位周跳候选审阅站（RINEX 导入 / 多频组合 / 弧段修订史）"
+
+[dependencies]
+axum = { version = "0.8", features = ["macros"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macr
+os", "net", "sync"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+rusqlite = { version = "0.37", features = ["bundled"] }
+sha2 = "0.10"
+hex = "0.4"
+
+[dev-dependencies]
+tempfile = "3"
+
+[profile.test]
+opt-level = 1
