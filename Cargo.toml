@@ -1,0 +1,22 @@
+[package]
+name = "gsb-cycle-slip-desk"
+version = "0.1.0"
+edition = "2021"
+description = "本地优先的 GNSS 载波相位周跳候选审阅台（RINEX 历元导入 / 多频组合 / 弧段修订史）"
+
+[[bin]]
+name = "gsb-desk"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.7"
+tokio = { version = "1", features = ["full"] }
+tower-http = { version = "0.5", features = ["fs"] }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+clap = { version = "4", features = ["derive"] }
+
+[dev-dependencies]
+tempfile = "3"
